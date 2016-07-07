@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/to_linear_rv_page_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/md_common_btn_height"
+        android:gravity="center"
+        android:text="@string/md_linear_rv"/>
+
+    <TextView
+        android:id="@+id/to_grid_rv_page_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/md_common_btn_height"
+        android:gravity="center"
+        android:background="@android:color/darker_gray"
+        android:text="@string/md_grid_rv"/>
+
+    <TextView
+        android:id="@+id/to_staggered_rv_page_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/md_common_btn_height"
+        android:gravity="center"
+        android:text="@string/md_staggered_rv"/>
+</LinearLayout>
