@@ -41,7 +41,7 @@ public class MDGridRvDividerDecoration extends RecyclerView.ItemDecoration {
         boolean isDrawHorizontalDivider = true;
         boolean isDrawVerticalDivider = true;
         int extra = childCount % spanCount;
-        extra = extra == 0 ? extra : spanCount;
+        extra = extra == 0 ? spanCount : extra;
         for(int i = 0; i < childCount; i++) {
             isDrawVerticalDivider = true;
             isDrawHorizontalDivider = true;
