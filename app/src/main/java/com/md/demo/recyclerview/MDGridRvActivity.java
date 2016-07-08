@@ -35,7 +35,7 @@ public class MDGridRvActivity extends MDBaseActivity {
 
     private void initData() {
         // 竖直方向的网格样式，每行四个Item
-        mLayoutManager = new GridLayoutManager(this, 1, OrientationHelper.VERTICAL, false);
+        mLayoutManager = new GridLayoutManager(this, 4, OrientationHelper.VERTICAL, false);
 
         mAdapter = new MDRvAdapter(MDMockData.getRvData());
     }
