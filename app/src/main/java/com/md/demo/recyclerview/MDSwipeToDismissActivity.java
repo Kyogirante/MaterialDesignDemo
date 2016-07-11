@@ -49,6 +49,7 @@ public class MDSwipeToDismissActivity extends MDBaseActivity {
              * @param recyclerView
              * @param viewHolder
              * @return
+             *          返回一个整数类型的标识，用于判断Item那种移动行为是允许的
              */
             @Override
             public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
@@ -56,12 +57,37 @@ public class MDSwipeToDismissActivity extends MDBaseActivity {
             }
 
             /**
-             * 移动Item
+             * Item是否支持长按拖动
+             *
+             * @return
+             *          true  支持长按操作
+             *          false 不支持长按操作
+             */
+            @Override
+            public boolean isLongPressDragEnabled() {
+                return false;
+            }
+
+            /**
+             * Item是否支持滑动
+             *
+             * @return
+             *          true  支持滑动操作
+             *          false 不支持滑动操作
+             */
+            @Override
+            public boolean isItemViewSwipeEnabled() {
+                return true;
+            }
+
+            /**
+             * 拖拽切换Item的回调
              *
              * @param recyclerView
              * @param viewHolder
              * @param target
              * @return
+             *          如果Item切换了位置，返回true；反之，返回false
              */
             @Override
             public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
@@ -73,6 +99,7 @@ public class MDSwipeToDismissActivity extends MDBaseActivity {
              *
              * @param viewHolder
              * @param direction
+             *           Item滑动的方向
              */
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
@@ -80,10 +107,14 @@ public class MDSwipeToDismissActivity extends MDBaseActivity {
             }
 
             /**
-             * Item被选中
+             * Item被选中时候回调
              *
              * @param viewHolder
              * @param actionState
+             *          当前Item的状态
+             *          ItemTouchHelper.ACTION_STATE_IDLE   闲置状态
+             *          ItemTouchHelper.ACTION_STATE_SWIPE  滑动中状态
+             *          ItemTouchHelper#ACTION_STATE_DRAG   拖拽中状态
              */
             @Override
             public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
@@ -95,15 +126,19 @@ public class MDSwipeToDismissActivity extends MDBaseActivity {
             }
 
             /**
-             * 移动过程中重新绘制Item
+             * 移动过程中绘制Item
              *
              * @param c
              * @param recyclerView
              * @param viewHolder
              * @param dX
+             *          X轴移动的距离
              * @param dY
+             *          Y轴移动的距离
              * @param actionState
+             *          当前Item的状态
              * @param isCurrentlyActive
+             *          如果当前被用户操作为true，反之为false
              */
             @Override
             public void onChildDraw(Canvas c, RecyclerView recyclerView,
@@ -118,15 +153,19 @@ public class MDSwipeToDismissActivity extends MDBaseActivity {
             }
 
             /**
-             * 移动过程中重新绘制Item
+             * 移动过程中绘制Item
              *
              * @param c
              * @param recyclerView
              * @param viewHolder
              * @param dX
+             *          X轴移动的距离
              * @param dY
+             *          Y轴移动的距离
              * @param actionState
+             *          当前Item的状态
              * @param isCurrentlyActive
+             *          如果当前被用户操作为true，反之为false
              */
             @Override
             public void onChildDrawOver(Canvas c, RecyclerView recyclerView,
@@ -137,27 +176,7 @@ public class MDSwipeToDismissActivity extends MDBaseActivity {
             }
 
             /**
-             * Item是否支持长按拖动
-             *
-             * @return
-             */
-            @Override
-            public boolean isLongPressDragEnabled() {
-                return false;
-            }
-
-            /**
-             * Item是否支持滑动
-             *
-             * @return
-             */
-            @Override
-            public boolean isItemViewSwipeEnabled() {
-                return true;
-            }
-
-            /**
-             * 用户操作完毕或者动画完毕后调用
+             * 用户操作完毕或者动画完毕后会被调用
              *
              * @param recyclerView
              * @param viewHolder
