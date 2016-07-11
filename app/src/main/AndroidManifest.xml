@@ -19,6 +19,8 @@
         <activity android:name=".recyclerview.MDLinearRvActivity"/>
         <activity android:name=".recyclerview.MDGridRvActivity"/>
         <activity android:name=".recyclerview.MDStaggeredRvActivity"/>
+        <activity android:name=".recyclerview.MDSwipeToDismissActivity"/>
+        <activity android:name=".recyclerview.MDDragRvActivity"/>
     </application>
 
 </manifest>

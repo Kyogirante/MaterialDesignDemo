@@ -3,7 +3,8 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="@dimen/md_common_view_height">
+              android:layout_height="@dimen/md_common_view_height"
+              android:background="@color/md_white">
     <TextView
         android:id="@+id/item_tv"
         android:layout_width="match_parent"

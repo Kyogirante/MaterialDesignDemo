@@ -12,4 +12,8 @@
     <string name="md_grid_rv">网格RecyclerView</string>
 
     <string name="md_staggered_rv">瀑布RecyclerView</string>
+
+    <string name="md_swipe_rv">滑动删除RecyclerView</string>
+
+    <string name="md_drag_rv">拖动切换item位置RecyclerView</string>
 </resources>

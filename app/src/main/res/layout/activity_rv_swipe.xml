@@ -7,8 +7,5 @@
         android:id="@+id/my_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/md_gray"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
         android:fadeScrollbars="true"/>
 </LinearLayout>

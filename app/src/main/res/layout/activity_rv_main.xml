@@ -24,4 +24,19 @@
         android:layout_height="@dimen/md_common_btn_height"
         android:gravity="center"
         android:text="@string/md_staggered_rv"/>
+
+    <TextView
+        android:id="@+id/to_swipe_rv_page_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/md_common_btn_height"
+        android:gravity="center"
+        android:background="@android:color/darker_gray"
+        android:text="@string/md_swipe_rv"/>
+
+    <TextView
+        android:id="@+id/to_drag_rv_page_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/md_common_btn_height"
+        android:gravity="center"
+        android:text="@string/md_drag_rv"/>
 </LinearLayout>

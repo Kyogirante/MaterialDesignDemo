@@ -19,6 +19,10 @@ public class MDRvMainActivity extends MDBaseActivity implements View.OnClickList
 
     private TextView mToStaggeredRvPageBtn;
 
+    private TextView mToSwipeToDismissRvPageBtn;
+
+    private TextView mToDragRvBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +36,16 @@ public class MDRvMainActivity extends MDBaseActivity implements View.OnClickList
         mToLinearRvPageBtn = (TextView) findViewById(R.id.to_linear_rv_page_btn);
         mToGridRvPageBtn = (TextView) findViewById(R.id.to_grid_rv_page_btn);
         mToStaggeredRvPageBtn = (TextView) findViewById(R.id.to_staggered_rv_page_btn);
+        mToSwipeToDismissRvPageBtn = (TextView) findViewById(R.id.to_swipe_rv_page_btn);
+        mToDragRvBtn = (TextView) findViewById(R.id.to_drag_rv_page_btn);
     }
 
     private void initAction() {
         mToLinearRvPageBtn.setOnClickListener(this);
         mToGridRvPageBtn.setOnClickListener(this);
         mToStaggeredRvPageBtn.setOnClickListener(this);
+        mToSwipeToDismissRvPageBtn.setOnClickListener(this);
+        mToDragRvBtn.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +59,12 @@ public class MDRvMainActivity extends MDBaseActivity implements View.OnClickList
             startActivity(intent);
         } else if(id == R.id.to_staggered_rv_page_btn) {
             Intent intent = new Intent(this, MDStaggeredRvActivity.class);
+            startActivity(intent);
+        } else if(id == R.id.to_swipe_rv_page_btn) {
+            Intent intent = new Intent(this, MDSwipeToDismissActivity.class);
+            startActivity(intent);
+        } else if(id == R.id.to_drag_rv_page_btn) {
+            Intent intent = new Intent(this, MDDragRvActivity.class);
             startActivity(intent);
         }
     }
